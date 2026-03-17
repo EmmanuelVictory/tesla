@@ -204,7 +204,7 @@ const IMAGES = {
   features:   "https://cdn.punchng.com/wp-content/uploads/2018/01/03092606/Luxury-cars.jpg",
   fsdVision:  "https://static.vecteezy.com/system/resources/previews/040/742/444/large_2x/yong-pretty-woman-standing-near-a-big-all-terrain-car-outdoors-driver-girl-in-casual-clothes-outside-her-vehicle-photo.jpg",
   solar:      "https://media.wired.com/photos/66f6d9e8edd5b22be7017791/16:9/w_4336,h_2439,c_limit/GettyImages-1681913304.jpg",
-  powerwall:  "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80",
+  powerwall:  "https://images.interestingengineering.com/2022/09/17/image/jpeg/TFwjseysLBXnJ02NoHuQPpMISKaUkCVKfNKIH6KA.jpg",
 };
 
 const HERO_SLIDES = [
