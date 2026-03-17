@@ -419,7 +419,7 @@ function Navbar() {
   }}
 >
   <img
-    src="https://ideasforus.org/wp-content/uploads/2023/03/Font-Tesla-logo-e1678338830801.jpg"
+    src="https://www.tramatm.com/_next/image?url=https%3A%2F%2Ftrama-static.s3.eu-central-1.amazonaws.com%2Fimages%2Fhall-of-fame%2Flogos%2F12-logo.png&w=3840&q=75"
     alt="TESLA"
     style={{ height: 18, width: "auto", display: "block" }}
   />
