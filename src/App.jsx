@@ -355,8 +355,8 @@ function FSDScreen() {
   return <canvas ref={canvasRef} width={210} height={148} style={{display:"block",width:"100%",height:"100%"}} />;
 }
 
-// ─── Navbar ───────────────────────────────────────────────────────────────────
-const NAV_LINK = { fontSize:"13px", fontWeight:"400", color:"rgba(26,29,33,0.82)", textDecoration:"none", padding:"6px 10px", borderRadius:"4px", whiteSpace:"nowrap", fontFamily:"'Montserrat',sans-serif", cursor:"pointer" };
+// ─── Navbar 
+const NAV_LINK = { fontSize:"13px", fontWeight:"1000", color:"rgba(26,29,33,0.82)", textDecoration:"none", padding:"6px 10px", borderRadius:"4px", whiteSpace:"nowrap", fontFamily:"'Montserrat',sans-serif", cursor:"pointer" };
 const ICON_BTN = { display:"flex", alignItems:"center", justifyContent:"center", width:"36px", height:"36px", borderRadius:"50%", border:"none", background:"none", cursor:"pointer", color:"rgba(26,29,33,0.72)", flexShrink:0 };
 
 function Navbar() {
