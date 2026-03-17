@@ -356,32 +356,114 @@ function FSDScreen() {
 }
 
 // ─── Navbar 
+
 const NAV_LINK = { fontSize:"13px", fontWeight:"1000", color:"rgba(26,29,33,0.82)", textDecoration:"none", padding:"6px 10px", borderRadius:"4px", whiteSpace:"nowrap", fontFamily:"'Montserrat',sans-serif", cursor:"pointer" };
 const ICON_BTN = { display:"flex", alignItems:"center", justifyContent:"center", width:"36px", height:"36px", borderRadius:"50%", border:"none", background:"none", cursor:"pointer", color:"rgba(26,29,33,0.72)", flexShrink:0 };
 
+function TeslaWordmark({ height = 18, color = "#1a1d21" }) {
+  return (
+    <svg
+      height={height}
+      viewBox="0 0 320 40"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Tesla"
+      style={{ display: "block" }}
+    >
+      <g fill={color}>
+        {/* T */}
+        <path d="M10 6h60v8H44v20h-8V14H10z" />
+        {/* E (three dashes) */}
+        <rect x="86" y="6" width="44" height="6" />
+        <rect x="86" y="17" width="36" height="6" />
+        <rect x="86" y="28" width="44" height="6" />
+        {/* S */}
+        <path d="M150 12c0-4 3-6 8-6h34v8h-32c-2 0-2 1-2 2s0 2 2 2h20c10 0 14 4 14 10s-4 10-14 10h-38v-8h36c2 0 3-1 3-2 0-2-1-2-3-2h-20c-10 0-14-4-14-10z" />
+        {/* L */}
+        <path d="M214 6h8v22h40v8h-48z" />
+        {/* A */}
+        <path d="M286 6h10l24 30h-10l-5-6h-28l-5 6h-10zm-3 16h16l-8-10z" />
+      </g>
+    </svg>
+  );
+}
+
+
 function Navbar() {
   return (
-    <header style={{ position:"fixed", top:0, left:0, right:0, zIndex:100, display:"grid", gridTemplateColumns:"200px 1fr 200px", alignItems:"center", padding:"0 40px", height:"52px", background:"#ffffff", borderBottom:"1px solid rgba(0,0,0,0.1)" }}>
-      <a href="#" style={{ fontSize:"13px", fontWeight:"700", letterSpacing:"0.18em", textDecoration:"none", color:"#1a1d21", fontFamily:"'Montserrat',sans-serif", justifySelf:"start", whiteSpace:"nowrap" }}>TESLA</a>
-      <nav style={{ display:"flex", gap:"0", justifyContent:"center" }}>
-        {["Vehicles","Energy","Charging","Discover","Shop"].map(link => (
-          <a key={link} href="#" style={NAV_LINK}>{link}</a>
+    <header
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
+        display: "grid",
+        gridTemplateColumns: "200px 1fr 200px",
+        alignItems: "center",
+        padding: "0 40px",
+        height: "52px",
+        background: "#ffffff",
+        borderBottom: "1px solid rgba(0,0,0,0.1)",
+      }}
+    >
+      {/* LEFT: Tesla wordmark */}
+  
+<a
+  href="#"
+  style={{
+    justifySelf: "start",
+    display: "flex",
+    alignItems: "center",
+    height: 22,
+    textDecoration: "none",
+  }}
+>
+  <img
+    src="https://ideasforus.org/wp-content/uploads/2023/03/Font-Tesla-logo-e1678338830801.jpg"
+    alt="TESLA"
+    style={{ height: 18, width: "auto", display: "block" }}
+  />
+</a>
+
+      {/* CENTER LINKS */}
+      <nav style={{ display: "flex", gap: "0", justifyContent: "center" }}>
+        {["Vehicles", "Energy", "Charging", "Discover", "Shop"].map((link) => (
+          <a key={link} href="#" style={NAV_LINK}>
+            {link}
+          </a>
         ))}
       </nav>
-      <div style={{ display:"flex", alignItems:"center", gap:"2px", justifySelf:"end" }}>
+
+      {/* RIGHT ICONS */}
+      <div style={{ display: "flex", alignItems: "center", gap: "2px", justifySelf: "end" }}>
         <button style={ICON_BTN} title="Help">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
         </button>
+
         <button style={ICON_BTN} title="Language">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
         </button>
+
         <button style={ICON_BTN} title="Account">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
         </button>
       </div>
     </header>
   );
 }
+  
+
 
 // ─── Hero 
 function Hero() {
