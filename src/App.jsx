@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-// ─── Supercharger Data ────────────────────────────────────────────────────────
+// ─── Supercharger Data
 const superchargerStations = [
   { lat: 37.3861, lng: -122.0839, name: "Mountain View Supercharger", city: "Mountain View", state: "CA", stalls: 20, kw: 250, address: "1001 N Shoreline Blvd" },
   { lat: 34.0522, lng: -118.2437, name: "Los Angeles Supercharger", city: "Los Angeles", state: "CA", stalls: 16, kw: 250, address: "1234 S Figueroa St" },
@@ -110,7 +110,7 @@ const superchargerStations = [
   { lat: 46.8772, lng: -96.7898, name: "Fargo Supercharger", city: "Fargo", state: "ND", stalls: 8, kw: 150, address: "5680 23rd Ave S" },
 ];
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
+// ─── Styles 
 const css = `
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -196,7 +196,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--fg)}
 }
 `;
 
-// ─── Images ───────────────────────────────────────────────────────────────────
+// ─── Images 
 const IMAGES = {
   heroModel3: "https://static.vecteezy.com/system/resources/thumbnails/055/672/799/small/red-modern-red-sport-car-driving-fast-on-scenic-road-in-forest-at-sunset-automotive-background-tuning-template-auto-transport-photo.jpg",
   heroModelS: "https://i.insider.com/592f4169b74af41b008b5977?width=1200&format=jpeg",
@@ -221,7 +221,7 @@ const VEHICLES = [
   { image:"https://carlots.ng/oc-content/uploads/blog/blog/58.jpg", tag:"Full-Size Truck", title:"Cybertruck" },
 ];
 
-// ─── Map Sub-components ───────────────────────────────────────────────────────
+// ─── Map Sub-components 
 function StationPopup({ station }) {
   return (
     <div style={{ minWidth: 220, padding: 4 }}>
@@ -314,7 +314,7 @@ function SearchOverlay({ stations }) {
   );
 }
 
-// ─── FSD Canvas ───────────────────────────────────────────────────────────────
+// ─── FSD Canvas
 function FSDScreen() {
   const canvasRef = useRef(null);
   useEffect(() => {
@@ -383,7 +383,7 @@ function Navbar() {
   );
 }
 
-// ─── Hero ─────────────────────────────────────────────────────────────────────
+// ─── Hero 
 function Hero() {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -437,7 +437,7 @@ function Hero() {
   );
 }
 
-// ─── Vehicle Showcase ─────────────────────────────────────────────────────────
+// ─── Vehicle Showcase 
 function VehicleShowcase() {
   const [idx, setIdx] = useState(0);
   const current = VEHICLES[idx];
@@ -466,7 +466,7 @@ function VehicleShowcase() {
   );
 }
 
-// ─── Offers ───────────────────────────────────────────────────────────────────
+// ─── Offers 
 function Offers() {
   const CARD = { background:"#fff", borderRadius:"6px", overflow:"hidden", display:"flex", boxShadow:"0 1px 4px rgba(0,0,0,0.06)" };
   const TEXT = { padding:"32px 28px", flex:1, display:"flex", flexDirection:"column", justifyContent:"center" };
@@ -490,7 +490,7 @@ function Offers() {
   );
 }
 
-// ─── Features ─────────────────────────────────────────────────────────────────
+// ─── Features 
 function Features() {
   return (
     <section className="features">
@@ -521,7 +521,7 @@ function Features() {
   );
 }
 
-// ─── Charging (with embedded map) ────────────────────────────────────────────
+// ─── Charging (with embedded map) 
 function Charging() {
   return (
     <section style={{ background:"#fff", padding:"0" }}>
@@ -581,7 +581,7 @@ function Charging() {
   );
 }
 
-// ─── Energy ───────────────────────────────────────────────────────────────────
+// ─── Energy 
 const ENERGY_CARDS = [
   { key:"solar",     title:"Solar Panels", subtitle:"Power Your Home and Reduce Your Bill" },
   { key:"powerwall", title:"Powerwall",    subtitle:"Keep Your Lights On During Outages"   },
@@ -614,7 +614,7 @@ function Energy() {
   );
 }
 
-// ─── Footer ───────────────────────────────────────────────────────────────────
+// ─── Footer 
 function Footer() {
   return (
     <footer className="footer">
@@ -631,7 +631,7 @@ function Footer() {
   );
 }
 
-// ─── Root ─────────────────────────────────────────────────────────────────────
+// ─── Root 
 export default function App() {
   useEffect(() => {
     if (!document.getElementById("tesla-styles")) {
